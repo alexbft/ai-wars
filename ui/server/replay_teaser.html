@@ -1,0 +1,7 @@
+﻿{{ if (_c.match) }}
+<div class="replay_teaser teaser">
+    <div class="cur">Последняя игра:</div>
+    <div class="link">{{ uis('replay_link', {match: match, challenge: challengeId}) }}</div>
+    <div class="more"><a href="/replays#{{challengeId}}">Еще реплеи</a></div>
+</div>
+{{ end }}

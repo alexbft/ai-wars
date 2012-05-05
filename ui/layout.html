@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html style="background-color:#333">
+<head>
+    <title>{{_c.title}}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/es5-shim.min.js"></script>
+    {{_c.head}}
+</head>
+<body><div class="content">{{body}}
+</div>
+
+<script src="/js/underscore-min.js"></script>
+<script src="/js/deferred.js"></script>
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script src="/js/jquery-ui-1.8.19.custom.min.js"></script>
+<script src="/js/scripts.js"></script>
+<script>
+    $('#gen_time').html({{now() - startGen}});
+    _.extend(window, require('client'));
+    $(function() {
+        require('ui/{{me.moduleName}}').initOnClient({{ JSON.stringify(me.getChildrenNames()) }});
+    });
+</script>
+</body>
+</html>

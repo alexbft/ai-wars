@@ -1,0 +1,5 @@
+﻿<ul class="challenges_menu">
+    {{ each (challenge in challenges) }}
+    <a href="#{{challenge.id}}"><li id="{{challenge.id}}" data-name="{{@ challenge.name}}">{{@ challenge.name}}</li></a>
+    {{/each}}
+</ul>

@@ -1,0 +1,11 @@
+﻿<div class="form submit_bot_form">
+    <label><a href="#">Важная информация</a></label>
+    <label>
+        Название бота:
+        <input type="text" id="name" value="{{ qget('botName').then(html) }}" />
+    </label>
+    <label>
+        Код:
+        <textarea id="code">{{@ src}}</textarea>
+    </label>
+</div>

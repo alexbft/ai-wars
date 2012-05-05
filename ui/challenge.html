@@ -1,0 +1,17 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', {it: [
+    ['Соревнования', '/challenges'],
+    [it.name, '/challenges/' + it.id]
+]}) }}
+<section class="body">
+    {{ ui('challenge_head', {it: it}) }}
+    <div class="col_left">
+        {{ ui('challenge_body', {it: it}) }}
+    </div>
+    <div class="col_right">
+        {{ ui('replay_teaser', {challengeId: it.id}) }}
+        {{ uis('challenge_current', {id: it.id, title: 'Результаты соревнования'}) }}
+    </div>
+    <div style="clear: both"></div>
+</section>
+{{ ui('footer') }}

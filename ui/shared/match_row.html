@@ -1,0 +1,26 @@
+﻿<td style="width: 300px">
+  {{ html(match.name) }}
+</td>
+
+<td>
+  <div class="progressbar_container" style="display:inline-block; width: 200px{{ match.result == -1 ? '' : '; display:none' }}">
+  {{ uis('progressbar', {it: {current: 0, progress: 0, max: maxTurns, interval: 50} }) }}
+  </div>
+{{ if (match.result == 0) }}
+  <div class="match_result" style="display:inline-block">
+    Draw<br />
+    {{ uis('replay_link', { match: match, title: 'View Replay', challenge: challenge }) }}
+  </div>
+{{ else if (match.result > 0) }}
+  <div class="match_result" style="display:inline-block">
+    Winner: {{ match.botNames[match.result - 1] }}<br />
+    {{ uis('replay_link', { match: match, title: 'View Replay', challenge: challenge }) }}
+  </div>
+{{ end }}
+</td>
+
+<td class="col_source">
+  <button class="start_match" data-match="{{ match.id }}">Start</button>
+  <button style="display:none" class="stop_match">Stop</button>
+  <button style="display:none" class="continue_match">Continue</button>
+</td>

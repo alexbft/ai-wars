@@ -1,0 +1,10 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', { it: [
+    ['Новости', '/news'],
+]}) }}
+<section class="body">
+    {{ each (post in news) }}
+    {{ ui('post', post) }}
+    {{ /each }}
+</section>
+{{ ui('footer') }}

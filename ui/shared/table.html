@@ -1,0 +1,17 @@
+﻿<article class="scoreboard">
+    <header>
+        {{ if (_c.title) }}<h1>{{title}}</h1>{{ end }}
+        <h2>{{_c.subtitle || '&nbsp;'}}</h2>
+    </header>
+    <table>
+    {{ each (row in data) }}
+        <tr>
+            {{ each (column in columns) }}
+                <td class="{{ column.cssClass || ('col_' + (column.raw || column.id || column)) }}">
+                  {{ column.raw ? row[column.raw] : html(row[column.id || column]) }}
+                </td>
+            {{ /each }}
+        </tr>
+    {{ /each }}
+    </table>
+</article>

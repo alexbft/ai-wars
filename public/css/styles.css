@@ -1,0 +1,434 @@
+.padded {
+  padding: 0 10px;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: url(/images/bg.jpg);
+}
+body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: #333333;
+  color: #f8f8f8;
+  overflow-y: scroll;
+  line-height: 150%;
+}
+div.content {
+  margin: 0 auto;
+  width: 960px;
+  position: relative;
+}
+a {
+  color: #b6ff00;
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+}
+td,
+pre,
+canvas {
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  color: #ffd800;
+}
+textarea {
+  background: #222222;
+  color: #f8f8f8;
+  font: 12px Consolas, "Courier New", monotype;
+  padding: 5px;
+  border: 1px solid silver;
+  resize: none;
+  height: 300px;
+}
+textarea.normal_font {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #222222;
+  color: #f8f8f8;
+  padding: 2px;
+  border: 1px solid silver;
+}
+button {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  height: 25px;
+}
+.logo {
+  height: 100px;
+}
+header.main {
+  margin-bottom: 20px;
+  background: url(/images/logo.png);
+}
+footer.main {
+  padding: 0 10px 30px 10px;
+}
+nav.crumbs {
+  padding: 0 10px;
+}
+nav.main {
+  padding: 0 10px;
+}
+nav.main a {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 50px;
+}
+aside.userinfo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.body > header h1 {
+  font-size: 28px;
+  color: #ffd800;
+  margin-bottom: 0.5em;
+}
+.challenge_head {
+  padding: 0 10px;
+}
+.challenge {
+  padding: 0 10px;
+}
+.challenge button {
+  font-size: 20px;
+  width: 250px;
+  height: 40px;
+  /*margin-bottom: 10px;*/
+
+}
+.challenge .text {
+  margin-top: 1em;
+}
+.sysinfo {
+  float: left;
+  color: gray;
+}
+.col_left {
+  width: 450px;
+  padding: 10px 0px 10px 0px;
+  float: left;
+}
+.col_right {
+  width: 450px;
+  padding: 10px 0px 10px 0px;
+  float: right;
+}
+hr {
+  border: 0 none;
+  border-bottom: 1px solid gray;
+}
+.posts {
+  padding: 0 10px;
+}
+article.post > header h1 {
+  font-size: 18px;
+  color: #ffd800;
+}
+.border {
+  border: 1px solid Gray;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+}
+article.scoreboard {
+  border: 1px solid Gray;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+article.scoreboard h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  color: #ffd800;
+}
+article.scoreboard h1 {
+  font-size: 20px;
+}
+article.scoreboard h2 {
+  font-size: 14px;
+  font-weight: normal;
+}
+article.scoreboard table {
+  width: 100%;
+  text-align: left;
+}
+article.scoreboard table tr:nth-child(even) {
+  background-color: #565633;
+}
+td.col_score {
+  text-align: right;
+  width: 22px;
+}
+td.col_place,
+td.col_check {
+  width: 22px;
+}
+td.col_submitDate,
+td.col_date {
+  width: 120px;
+}
+td.col_source {
+  width: 200px;
+  text-align: right;
+}
+td.col_last {
+  text-align: right;
+}
+.teaser {
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+.teaser img,
+.challenge img {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.teaser .cur {
+  color: #ffd800;
+}
+.teaser .link {
+  font-size: 20px;
+}
+.teaser button {
+  font-size: 20px;
+  width: 250px;
+  height: 40px;
+  margin-top: 10px;
+}
+.more {
+  font-size: 16px;
+  text-align: right;
+}
+.code_editor select {
+  width: 450px;
+  margin-bottom: 10px;
+}
+.code_editor textarea {
+  width: 438px;
+  height: 400px;
+}
+.code_editor .CodeMirror-scroll {
+  height: 400px;
+}
+.submit {
+  width: 200px;
+  height: 30px;
+  font-size: 15px;
+}
+.body > .buttons,
+.body > .form > .buttons {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.modal_back {
+  z-index: 100;
+  background-color: #111;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+.modal_frame {
+  position: fixed;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+}
+.modal_frame,
+.modal_back {
+  top: 0;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+.modal {
+  border: 1px solid gray;
+  padding: 10px 10px 48px 10px;
+  border-radius: 8px;
+  min-width: 250px;
+  min-height: 50px;
+  display: inline-block;
+  background-color: #333333;
+  background: url(/images/bg.jpg);
+  text-align: left;
+  vertical-align: top;
+  position: relative;
+}
+.modal_layout {
+  width: 100%;
+  height: 100%;
+}
+.modal > .buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 28px;
+  padding: 10px 10px;
+  text-align: right;
+}
+.modal > .buttons button {
+  min-width: 90px;
+  height: 28px;
+  margin-left: 10px;
+}
+.modal > h1 {
+  font-size: 20px;
+  color: #ffd800;
+  margin-top: 0;
+  cursor: move;
+}
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  display: block;
+  width: 450px;
+}
+.form textarea {
+  display: block;
+  width: 444px;
+}
+.narrow {
+  width: 450px;
+  margin: 0 auto;
+}
+.progress_frame {
+  border: 1px solid silver;
+  background: #222222;
+  position: relative;
+  height: 15px;
+}
+.progress_frame .progress {
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333333;
+  z-index: 1;
+}
+.progress_frame .current {
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #a00;
+  z-index: 2;
+}
+.progressbar .meter {
+  float: right;
+}
+.progressbar_hint {
+  position: absolute;
+  visibility: hidden;
+  padding: 0 5px;
+  background: #ccc;
+  color: #333333;
+  z-index: 200;
+}
+.progressbar_hint.visible {
+  visibility: visible;
+}
+.vis {
+  background: #222222;
+  margin-bottom: 10px;
+  border: 1px solid silver;
+}
+.vis pre {
+  font-size: 12px;
+  line-height: 1em;
+  color: #fff;
+}
+.winner {
+  text-align: center;
+  font-weight: bold;
+}
+.p1frame {
+  float: left;
+  padding: 0 5px;
+  font-weight: bold;
+}
+.p1color {
+  color: #f44;
+}
+.p2frame {
+  float: right;
+  padding: 0 5px;
+  font-weight: bold;
+}
+.p2color {
+  color: lime;
+}
+.scores {
+  padding-top: 1px;
+}
+.coin {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  background: url(/images/mario.png) 0 -48px;
+}
+.challenge_brief {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.challenge_brief > img {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.challenge_brief h1 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+.check_panel {
+  margin-bottom: 10px;
+}
+.matches {
+  width: 100%;
+}
+.matches td {
+  vertical-align: top;
+}
+.challenges_menu {
+  border: 1px solid Gray;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+.challenges_menu li {
+  padding: 5px 0;
+  margin: 0;
+  list-style: none;
+  font-size: 16px;
+}
+.challenges_menu li:hover {
+  background-color: #565633;
+}
+.challenges_menu li:target {
+  background-color: #5588dd !important;
+  color: #fff;
+}
+.user_feedback header {
+  color: #ffd800;
+}

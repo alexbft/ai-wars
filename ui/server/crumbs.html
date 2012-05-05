@@ -1,0 +1,9 @@
+<nav class="crumbs">
+{{  var buf = [];
+    _.each([['Главная', '/']].concat(it), function(x) {
+        buf.push('<a href="' + x[1] + '">' + html(x[0]) + '</a>');
+    });
+    print(buf.join(' &gt; '));
+}}
+</nav>
+<hr />

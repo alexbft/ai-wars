@@ -1,0 +1,11 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', { it: [
+    ['Соревнования', '/challenges'],
+]}) }}
+<section class="body">
+    {{ each (challenge in challenges) }}
+    {{ ui('challenge_brief', challenge) }}
+    {{ /each }}
+    <div style="clear: both"></div>
+</section>
+{{ ui('footer') }}

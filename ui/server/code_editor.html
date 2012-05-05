@@ -1,0 +1,15 @@
+{{once}}
+<script src="/js/codemirror-min.js"></script>
+{{end}}
+<div class="code_editor" id="{{id}}" data-sel-id="{{selId}}">
+    <div>
+        <select>
+        {{for (var i in it)}}
+            <option value="{{i}}" data-code="{{html(it[i][1])}}">{{it[i][0]}}</option>
+        {{end}}
+        </select>
+    </div>
+    <div>
+        <textarea></textarea>
+    </div>
+</div>

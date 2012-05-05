@@ -1,0 +1,17 @@
+﻿<table class="modal_frame">
+    <tr>
+        <td>
+            <div class="modal">
+                {{ if (_c.title) }}
+                <h1>{{title}}</h1>
+                {{ end }}
+                <div class="text">{{html}}</div>
+                <div class="buttons">
+                    {{ each (b, i in buttons) }}
+                    <button id="button{{i}}" data-num="{{i}}">{{b.text}}</button>
+                    {{/each}}
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

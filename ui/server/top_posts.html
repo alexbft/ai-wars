@@ -1,0 +1,7 @@
+﻿<div class="posts">
+{{ each (post in news) }}
+{{ ui('post', post) }}
+{{ /each }}
+<br />
+<div class="more"><a href="/news">Еще новости</a></div>
+</div>

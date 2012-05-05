@@ -1,0 +1,14 @@
+﻿({
+
+{for f in files}
+{if f.isScript}
+'{f.name}': function(require, module, exports, __dirname) {
+{f.src}
+}, // end of {f.name}
+{else}
+'{f.name}': {f.src},
+{/if}
+{/for}
+
+'': null
+});

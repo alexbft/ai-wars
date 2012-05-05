@@ -1,0 +1,11 @@
+﻿{{if (it)}}
+<aside class="userinfo">Здравствуй, <a href="#" onclick="logout(); return false;">{{it.login}}</a>!</aside>
+<script>
+  var user = { id: '{{it.id}}', login: '{{it.login}}' };
+</script>
+{{else}}
+<aside class="userinfo"><a id="login" href="/login">Вход</a> | <a href="/register">Регистрация</a></aside>
+<script>
+  var user = null;
+</script>
+{{end}}

@@ -1,0 +1,19 @@
+﻿<div class="login_form form">
+    <label>
+        Логин:
+        <input type="text" id="login" />
+    </label>
+    <label>
+        Пароль:
+        <input type="password" id="pass" />
+    </label>
+    <div><a href="/register">$регистрация</a></div>
+    {{ if (!isModal) }}
+    <div class="buttons">
+        <button class="submit" onclick="require('ui/shared/login').login();">Вход</button>
+    </div>
+    {{ end }}
+</div>
+<script>
+    var referer = '{{ me.req && me.req.headers.referer }}';
+</script>

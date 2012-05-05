@@ -1,0 +1,25 @@
+﻿{{ ui('header') }}
+<section class="body narrow">
+    <header><h1>Регистрация</h1></header>
+    <form class="register_form form">
+        <label>
+            Логин:
+            <input type="text" id="login" />
+        </label>
+        <label>
+            Пароль:
+            <input type="password" id="pass" />
+        </label>
+        <label>
+            Повторите пароль:
+            <input type="password" id="pass2" />
+        </label>
+        <div class="buttons">
+            <input class="submit" type="submit" value="Зарегистрироваться" />
+        </div>
+    </form>
+</section>
+<script>
+    var referer = '{{ me.req && me.req.headers.referer }}';
+</script>
+{{ ui('footer') }}

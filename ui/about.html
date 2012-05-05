@@ -1,0 +1,25 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', { it: [
+    ['О проекте', '/about'],
+]}) }}
+<section class="body padded">
+    <img style="float: right" src="/images/me.jpg" />
+    <p>Привет, я Alexbft. Здесь вы можете оставить мне сообщение.</p>
+    <form class="form">
+        <label>
+            Ваше имя (например, Anonymous):
+            <input type="text" id="name" value="{{me.req.user && me.req.user.login}}" />
+        </label>
+        <label>
+            Ваш e-mail (например, nomad@ag.ru):
+            <input type="email" id="email" pattern="[^ @]*@[^ @]*" />
+        </label>
+        <label>
+            Текст сообщения:
+            <textarea id="text" class="normal_font"></textarea>
+        </label>
+        <div class="buttons">
+            <input class="submit" type="submit" value="Отправить!" />
+        </div>        
+    </form>
+</section>

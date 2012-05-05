@@ -1,0 +1,13 @@
+﻿{{ ui('header') }}
+<section class="body">
+    <div class="col_left">
+        {{ ui('challenge_teaser', {it: currentChallenge}) }}
+        {{ ui('top_posts') }}
+    </div>
+    <div class="col_right">
+        {{ uis('challenge_scores', { title: 'Лучшие результаты', subtitle: currentChallenge.name, id: currentChallenge.id }) }}
+        {{ uis('user_scores', { title: 'Авторы', subtitle: 'Очки за все соревнования' }) }}
+    </div>
+    <div style="clear: both"></div>
+</section>
+{{ ui('footer') }}

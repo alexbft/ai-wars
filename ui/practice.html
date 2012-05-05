@@ -1,0 +1,27 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', { it: [
+    ['Challenges', '/challenges'],
+    [it.name, '/challenges/' + it.id],
+    ['Practice Room', '/challenges/' + it.id + '/practice']
+]}) }}
+<section class="body">
+    <div class="col_left">
+        {{ ui('code_editor', {id: 'code1', it: code, selId: selId}) }}
+    </div>
+    <div class="col_right">
+        {{ ui('code_editor', {id: 'code2', it: code, selId: it.sampleBotCodeId}) }}
+    </div>
+    <div style="clear: both"></div>
+    <div class="buttons">
+        <div style="float: left; position: relative">
+            <div style="position: absolute">
+                <button class="submit" id="submit_bot">Отправить AI на сервер</button>
+            </div>
+        </div>
+        <button class="submit" id="start_practice">Тренировочная игра</button>
+    </div>
+</section>
+{{ ui('footer') }}
+<script>
+    var challengeIdClient = '{{it.id}}';
+</script>

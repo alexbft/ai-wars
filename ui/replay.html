@@ -1,0 +1,12 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', {it: [
+    ['Реплеи', '/replays#' + challengeId],
+    [match.name, '/replays/' + match.id]
+]}) }}
+<section class="body">
+<div class="teaser" style="margin-top:25px">
+    <div class="cur">Посмотреть реплей:</div>
+    <div class="link">{{ uis('replay_link', {match: match, challenge: challengeId}) }}</div>
+</div>
+</section>
+{{ ui('footer') }}

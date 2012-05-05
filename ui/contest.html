@@ -1,0 +1,22 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', {it: [
+    ['Challenges', '/challenges'],
+    [challenge.name, '/challenges/' + challenge.id],
+    ['Contests', '/challenges/' + challenge.id + '/contests'],
+    [contestDate, '/contests/' + contest.id]
+]}) }}
+<section class="body">
+<table class="matches">
+{{ each (match in matches) }}
+<tr>{{ uis('match_row', { match: match, maxTurns: challengeEngine.maxTurns, challenge: challenge.id }) }}</tr>
+{{ /each }}
+</table>
+<div class="buttons">
+  <button id="finish">Finish contest</button>
+</div>
+</section>
+<script>
+  var challengeIdClient = {{ json(challenge.id) }};
+  var contestIdClient = {{ json(contest.id) }};
+</script>
+{{ ui('footer') }}

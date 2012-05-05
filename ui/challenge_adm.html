@@ -1,0 +1,24 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', {it: [
+    ['Challenges', '/challenges'],
+    [it.name, '/challenges/' + it.id],
+    ['Admin Tools', '/adm']
+]}) }}
+<section class="body">
+    {{ ui('challenge_head', {it: it}) }}
+    <div class="check_panel">
+      <button id="check_all">Выбрать все</button>
+      <button id="check_none">Снять выделение</button>
+    </div>
+    {{ uis('table', { id: it.id, title: 'Submits', columns: [{raw: 'check'}, 'name', 'date', {raw: 'source'}], data: submits }) }}
+    <div>
+      <label><input type="checkbox" id="rated" /> Рейтинговый турнир</label>
+    </div>
+    <div class="buttons">
+      <button id="start_contest">Начать турнир</button>
+    </div>
+</section>
+<script>
+  var challengeIdClient = {{ json(it.id) }};
+</script>
+{{ ui('footer') }}

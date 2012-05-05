@@ -1,0 +1,11 @@
+﻿{{ ui('header') }}
+{{ ui('crumbs', {it: [
+    ['Challenges', '/challenges'],
+    [it.name, '/challenges/' + it.id],
+    ['Contests', '/challenges/' + it.id + '/contests']
+]}) }}
+<section class="body narrow">
+    {{ ui('challenge_head', {it: it}) }}
+    {{ uis('table', { title: 'Contests', columns: columns, data: rows }) }}
+</section>
+{{ ui('footer') }}

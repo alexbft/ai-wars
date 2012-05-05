@@ -1,0 +1,13 @@
+﻿{{ ui('header') }}
+<section class="body">
+    {{ each (msg, i in messages) }}
+    <article class="user_feedback">
+        {{ if (i) }}<hr />{{ end }}
+        <header>
+            <span>От {{@ msg.name}} &lt;{{@ msg.email}}&gt;</span>{{if (msg.user)}} <span>({{@ msg.user}})</span>{{end}}<span>, {{ formatDateTime(msg.date) }}</span>
+        </header>
+        <p class="text">{{html(msg.text).replace(/\n/g, '<br />')}}</p>
+    </article>
+    {{ /each }}
+</section>
+{{ ui('footer') }}

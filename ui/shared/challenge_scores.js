@@ -23,6 +23,7 @@ exports.getScores = function (challengeId) {
         .desc('date')
         .run().asDeferred()
         .then(function (contest) {
+            if (!contest) return [];
             var botIds = Object.keys(contest.scores);
             return Bot.find({ _id: { $in: botIds } }).desc('score').run().asDeferred();
         })

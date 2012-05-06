@@ -208,6 +208,7 @@ var services = module.exports = {
                     }));
                     return deferred.apply(undefined, actions).then(function () {
                         utils.clearCache({ scores: contest.challenge });
+                        utils.clearCache({ top_scores: contest.challenge });
                         utils.clearCache({ replay: contest.challenge });
                         utils.clearCache({ replays: contest.challenge });
                         utils.clearCache('user_scores');
